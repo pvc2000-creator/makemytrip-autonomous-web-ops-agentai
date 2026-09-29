@@ -1,3 +1,4 @@
+
 """Browser action runner.
 
 Executes a plan step by step in a real browser (Playwright/Chromium), or with a plain HTTP engine
