@@ -11,18 +11,18 @@ Governance: every navigation, including ones caused by clicking links, must stay
 allowlist; the agent never types into card, CVV, OTP or password fields; approval steps block until a
 person decides in the UI.
 """
-import re
-import sys
 import asyncio
 import os
+import re
+import sys
 import time
 from urllib.parse import urljoin
 
 import httpx
 from bs4 import BeautifulSoup
 
-from backend.config import settings
 from backend.auth.policy import PolicyViolation, policy
+from backend.config import settings
 from backend.jobs.live import StopRequested, hub
 from extraction.normalizers import normalize_price
 
